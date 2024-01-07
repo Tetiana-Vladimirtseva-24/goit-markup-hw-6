@@ -1,3 +1,6 @@
+.hide {
+    display: none;
+}
 /* BODY */
 body {
     color:#434455;
@@ -29,10 +32,32 @@ ul{
     display: flex;
 }
 .container {
-    width: 1158px;
+    /* phone devices */
+    max-width: 320px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 1158px;
     margin: 0 auto;
     padding-left: 15px;
-    padding-right: 15px; 
+    padding-right: 15px;*/
+    outline: 2px solid red; 
+    outline: offset -2px;  
+}
+@media screen and (min-width:768px) {
+  .container{
+    /* Tablet devices */
+    max-width: 768px;
+     }
+}
+@media screen and (min-width:1158px) {
+    /* Dekstop */
+    .container{
+        max-width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 .nav-menu {
     display: flex;
@@ -246,11 +271,29 @@ gap: 24px;
 }
 
 /* Our Team */
+.section {
+    /* phone devices  */
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+@media only screen and (min-width:768px) {
+   .section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+   } 
+}
+@media only screen and (min-width:1158px) {
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+  }  
+
 .our-team-section {
     background-color:#F4F4FD;
-    padding: 120px 0 120px 0;
-}
+}  
 .team {
+    max-width: 412px;
     color:#2E2F42;
     font-family: "Roboto";
     font-size: 36px;
@@ -261,19 +304,55 @@ gap: 24px;
     text-transform: capitalize;
     text-align: center;
     margin-bottom: 72px;
+    
+}
+@media only screen and (min-width:768px){
+    /* tablet */
+    .team {
+
+        color:#2E2F42;
+        font-family: "Roboto";
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+        text-align: center;
+        margin-bottom: 72px;
+    }
 }
 .list-our-team {
+    /* phone */
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    /* gap: 24px; */
+    gap: 72px;
 }
 .list-of-people {
+    width: 264px;
     background-color: #FFFFFF;
-    width: calc((100% - 72px) / 4);
     border-radius: 0 0 4px 4px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
                 0px 1px 1px rgba(46, 47, 66, 0.16), 
                 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+@media only screen and (min-width: 768px) {
+    /* tablet */
+   .list-of-people {
+    justify-content: center;
+    }
+}
+@media only screen and (min-width: 1158px) {
+    /* Dekstop */
+    .list-of-people {
+   width: calc((100% - 72px) / 4);
+     gap: 24px;
+    }
+}
+    
+
+
 .employees {
     padding: 32px 0;   
 }
